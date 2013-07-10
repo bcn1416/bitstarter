@@ -6,7 +6,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
 	var url = '/index.html';
-	path.join(__dirname, url);
+	url = path.join(__dirname, url);
 	response.send((fs.readFileSync(url)).toString());
 	//response.send((fs.readFileSync('index.html')).toString());
 	//response.send('Hello World!');
